@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="textjavascript" src="prac1.js">
+
+    </script>
+</head>
+<body>
+<script>
+    var height = prompt("身長を入力してください（単位：cm）");
+    
+    
+    if (height !== null && height !== "") {
+        if (!isNaN(height)) {
+            if (parseInt(height) >= 100) {
+                var hasPremiumTicket = confirm("プレミアムチケットを持っていますか？");
+                if (hasPremiumTicket) {
+                    alert("プレミアムシートに乗車可能です。");
+                } else {
+                    alert("通常シートに乗車可能です。");
+                }
+            } 
+            else if (parseInt(height) >= 90) {
+                alert("身長90cm以上であれば付き添いありで乗車可能です。");
+            } 
+            else {
+                alert("身長が90cm未満のため、乗車できません。");
+            }
+        } else {
+            alert("半角数字で入力してください。");
+        }
+    } else {
+        alert("入力がないと判定できません。");
+    }
+</script>
+    
+</body>
+</html>
